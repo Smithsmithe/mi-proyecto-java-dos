@@ -35,7 +35,7 @@ const reverseSet = (set) => {
 
 const firstElement = (array) => {
     if( Array.isArray(array)) {
-        return array[1,2];
+        return array[0];
     } else {
         return null;
     }
@@ -56,9 +56,39 @@ const m = [
   [4, 5, 6]
 ];
 
+// suma de dos números
+const suma = (a, b) => {
+    return a + b;
+}
+
+
+// convierte los argumentos en un array y devuelve el primer elemento
+
+const firstElementVariadic = function(...sumados) {
+    return sumados[0];
+}
+
+
+// Parametro por defecto
+const saluda = (saludo = "Hola") => {
+    return saludo;
+}
+
+function saludar(saludar) {
+    if (typeof saludar === 'string') {
+        saludar = "Holas";
+    }
+    else{
+        return saludar;
+    }
+    
+}
+
 
 // pruebas
-
+console.log(saludar(10));
+console.log(saluda());
+console.log(firstElementVariadic(10, 20, 30, 40));
 console.log(suma(5, 3));
 console.log(elementAt(m, 1, 1));
 console.log(firstElement([1, 2, 3, 4, 5]));
