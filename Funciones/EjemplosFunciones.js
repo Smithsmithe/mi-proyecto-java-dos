@@ -33,8 +33,35 @@ const reverseSet = (set) => {
     }
 }
 
+const firstElement = (array) => {
+    if( Array.isArray(array)) {
+        return array[1,2];
+    } else {
+        return null;
+    }
+}
+
+const elementAt = (matriz, fila, columna) => {
+    if (
+        Array.isArray(matriz) &&
+        Array.isArray(matriz[fila])
+    ) {
+        return matriz[fila][columna];
+    }
+    return null;
+}
+
+const m = [
+  [1, 2, 3],
+  [4, 5, 6]
+];
+
 
 // pruebas
+
+console.log(suma(5, 3));
+console.log(elementAt(m, 1, 1));
+console.log(firstElement([1, 2, 3, 4, 5]));
 console.log(Palindrome("anitalavalatina"));
 console.log(arraToMap(['a', 'b', 'c', 'd']));
 console.log(reverseSet(new Set([1, 2, 3, 4, 5])));
